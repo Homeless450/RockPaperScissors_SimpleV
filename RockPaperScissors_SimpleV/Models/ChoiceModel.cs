@@ -3,6 +3,6 @@
     public class ChoiceModel
     {
         public int statusCode { get; set; } 
-        public string body { get; set; }
+        public string? body { get; set; }
     }
 }
