@@ -1,7 +1,12 @@
+using RockPaperScissors_SimpleV.CurbServices;
+using RockPaperScissors_SimpleV.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IGameResults, GameResults>();
+builder.Services.AddScoped<IGameChoice, GameChoice>();
 builder.Configuration.AddJsonFile("appsettings.json");
 
 
