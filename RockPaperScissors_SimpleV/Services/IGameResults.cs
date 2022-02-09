@@ -2,6 +2,6 @@
 {
     public interface IGameResults
     {
-        public string
+        public GameResultModel PlayerChoice(string playerChoice, string gameChoice);
     }
 }

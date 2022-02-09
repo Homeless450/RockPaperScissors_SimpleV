@@ -5,7 +5,7 @@ namespace RockPaperScissors_SimpleV.CurbServices
 {
     public class GameChoice : IGameChoice
     {
-        public async Task<GameChoiceModel> CurbChoice(IConfiguration configuration)
+        public async Task<GameChoiceModel> GameIsChoosing(IConfiguration configuration)
         {
             var client = new HttpClient();
 
