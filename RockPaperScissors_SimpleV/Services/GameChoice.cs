@@ -9,7 +9,7 @@ namespace RockPaperScissors_SimpleV.CurbServices
         {
             var client = new HttpClient();
 
-            var baseAdress = configuration.GetSection("AppSettings").GetSection("BaseAdress").Value;
+            var baseAdress = configuration.GetSection("BaseAdress").Value;
 
             client.Timeout = TimeSpan.FromSeconds(5);
             var content = await client.GetStringAsync(baseAdress);

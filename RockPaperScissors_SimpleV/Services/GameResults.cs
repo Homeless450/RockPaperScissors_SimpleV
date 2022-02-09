@@ -2,7 +2,7 @@
 
 namespace RockPaperScissors_SimpleV.Services
 {
-    public class GameResults
+    public class GameResults:IGameResults
     {
         public GameResultModel ShowGameResult(string playerChoice, GameChoiceModel gameChoice)
         {
@@ -44,9 +44,8 @@ namespace RockPaperScissors_SimpleV.Services
             }
             else
             {
-                Console.WriteLine("Draw");
+                return "Draw";
             };
-            return null;
         }
     }
 }

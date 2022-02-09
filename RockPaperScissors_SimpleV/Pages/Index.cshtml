@@ -3,10 +3,26 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+@*
 <div class="text-center">
     <h1 class="display-4">Rock Paper and Scissors</h1>
     <input type="submit" value="[ Rock ]" />
     <input type="submit" value="[ Paper ]" />
     <input type="submit" value="[ Scissors ]" />
 </div>
+*@
+
+<form method="post">
+    <h2>What kind of yoga classes you are looking for?</h2>
+    <input type="submit" 
+value="Rock" 
+asp-page-handler="Rock" asp-route-sessioncount="20" />
+    <br />
+    <input type="submit" 
+value="Paper" 
+asp-page-handler="Paper" asp-route-sessioncount="10" />
+    <br />
+    <input type="submit" 
+value="Scissors" 
+asp-page-handler="Scissors" asp-route-sessioncount="15" />
+</form>
