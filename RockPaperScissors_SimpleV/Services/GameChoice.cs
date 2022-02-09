@@ -3,7 +3,7 @@ using RockPaperScissors_SimpleV.Models;
 
 namespace RockPaperScissors_SimpleV.CurbServices
 {
-    public class GameServices : IGameServices
+    public class GameChoice : IGameChoice
     {
         public async Task<string> CurbChoice(IConfiguration configuration)
         {

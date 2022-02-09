@@ -2,7 +2,7 @@
 
 namespace RockPaperScissors_SimpleV.CurbServices
 {
-    public interface IGameServices
+    public interface IGameChoice
     {
         public Task<string> CurbChoice(IConfiguration configuration);
     }
