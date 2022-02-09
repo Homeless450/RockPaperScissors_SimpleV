@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RockPaperScissors_SimpleV.Models;
+using System.Collections.Generic;
 
 namespace RockPaperScissors_SimpleV.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        public IEnumerable<ChoiceModel> UserChoice { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel()
         {
-            _logger = logger;
         }
 
         public void OnGet()
