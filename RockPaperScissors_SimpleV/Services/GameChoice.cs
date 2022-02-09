@@ -5,7 +5,7 @@ namespace RockPaperScissors_SimpleV.CurbServices
 {
     public class GameChoice : IGameChoice
     {
-        public async Task<string> CurbChoice(IConfiguration configuration)
+        public async Task<GameChoiceModel> CurbChoice(IConfiguration configuration)
         {
             var client = new HttpClient();
 
@@ -13,15 +13,18 @@ namespace RockPaperScissors_SimpleV.CurbServices
 
             client.Timeout = TimeSpan.FromSeconds(5);
             var content = await client.GetStringAsync(baseAdress);
-            var curbChoice = JsonConvert.DeserializeObject<ChoiceModel>(content);
+            var gameChoice = JsonConvert.DeserializeObject<GameChoiceModel>(content);
             
-            if (curbChoice.statusCode == 200)
+            if (gameChoice.StatusCode == 200)
             {
-                return curbChoice.body;
+                gameChoice.WhosChoice = "curb";
+                return gameChoice;
             }
             else
             {
-                return RandomChoice();
+                gameChoice.Body = RandomChoice();
+                gameChoice.WhosChoice = "local";
+                return gameChoice;
             }
         }        
 

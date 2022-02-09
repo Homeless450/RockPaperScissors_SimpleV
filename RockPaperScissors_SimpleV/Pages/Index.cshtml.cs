@@ -7,7 +7,7 @@ namespace RockPaperScissors_SimpleV.Pages
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<ChoiceModel> UserChoice { get; set; }
+        public IEnumerable<GameChoiceModel> UserChoice { get; set; }
 
         public IndexModel()
         {
