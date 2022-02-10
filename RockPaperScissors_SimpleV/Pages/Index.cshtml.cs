@@ -11,6 +11,7 @@ namespace RockPaperScissors_SimpleV.Pages
         IConfiguration _configuration;
         IGameResults _gameResults;
         IGameChoice _gameChoice;
+        public string Message { get; set; }
 
         public IndexModel(IConfiguration configuration, IGameResults gameResults, IGameChoice gameChoice)
         {
@@ -22,20 +23,26 @@ namespace RockPaperScissors_SimpleV.Pages
         
         public async void OnPostRockAsync()
         {
-            var gameChoice1 = await _gameChoice.GameIsChoosing(_configuration);
-            _gameResults.ShowGameResult("rock", gameChoice1);
+            var botChoice = await _gameChoice.GameIsChoosing(_configuration);
+            var message = _gameResults.ShowGameResult("rock", botChoice);
+
+            Message = $"{ message}";
         }
 
         public async void OnPostPaperAsync()
         {
-            var gameChoice1 = await _gameChoice.GameIsChoosing(_configuration);
-            _gameResults.ShowGameResult("paper", gameChoice1);
+            var botChoice = await _gameChoice.GameIsChoosing(_configuration);
+            var message = _gameResults.ShowGameResult("paper", botChoice);
+
+            Message = $"{ message}";
         }
 
         public async void OnPostScissorsAsync()
         {
-            var gameChoice1 = await _gameChoice.GameIsChoosing(_configuration);
-            _gameResults.ShowGameResult("scissors", gameChoice1);
+            var botChoice = await _gameChoice.GameIsChoosing(_configuration);
+            var message = _gameResults.ShowGameResult("scissors", botChoice);
+
+            Message = $"{ message}";
         }
     }
 }
