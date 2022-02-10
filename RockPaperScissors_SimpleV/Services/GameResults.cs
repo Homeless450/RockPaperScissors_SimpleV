@@ -4,7 +4,8 @@ namespace RockPaperScissors_SimpleV.Services
 {
     public class GameResults:IGameResults
     {
-        public GameResultModel ShowGameResult(string playerChoice, GameChoiceModel gameChoice)
+
+        public string ShowGameResult(string playerChoice, GameChoiceModel gameChoice)
         {
             var gameResult = new GameResultModel();
 
@@ -13,7 +14,24 @@ namespace RockPaperScissors_SimpleV.Services
             gameResult.WhosChoice = gameChoice.WhosChoice;
             gameResult.WhosWinner = WinnerDefinitan(playerChoice, gameChoice.Body, gameResult.WhosChoice);
 
-            return gameResult;
+            var message = EndGameMessageBuider(gameResult);
+            return message;
+        }
+
+        private string EndGameMessageBuider(GameResultModel gameResult)
+        {
+            if (gameResult.WhosWinner == "Draw")
+            {
+                return "It's a draw";
+            }
+            else if (gameResult.WhosWinner == "Player")
+            {
+                return gameResult.WhosWinner + "won with" + gameResult.PlayerChoice + ". " + gameResult.WhosChoice + " lost with " + gameResult.GameChoice + ".";
+            }
+            else
+            {
+                return gameResult.WhosWinner + "won with" + gameResult.GameChoice + ". Player lost with " + gameResult.PlayerChoice + ".";
+            }
         }
 
         private string WinnerDefinitan(string playerChoice, string gameChoice, string whosChoice)

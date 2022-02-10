@@ -8,7 +8,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockPaperScissors_SimpleV",
 		{C05877CF-20CF-4FF9-BC08-D3460AD9AC37} = {C05877CF-20CF-4FF9-BC08-D3460AD9AC37}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{C05877CF-20CF-4FF9-BC08-D3460AD9AC37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{C05877CF-20CF-4FF9-BC08-D3460AD9AC37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

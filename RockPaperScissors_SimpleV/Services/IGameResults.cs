@@ -4,6 +4,6 @@ namespace RockPaperScissors_SimpleV.Services
 {
     public interface IGameResults
     {
-        public GameResultModel ShowGameResult(string playerChoice, GameChoiceModel gameChoice);
+        public string ShowGameResult(string playerChoice, GameChoiceModel gameChoice);
     }
 }
