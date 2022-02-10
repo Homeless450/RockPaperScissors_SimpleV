@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using RockPaperScissors_SimpleV.Models;
 using RockPaperScissors_SimpleV.Services;
 using RockPaperScissors_SimpleV.CurbServices;
 
@@ -18,7 +17,6 @@ namespace RockPaperScissors_SimpleV.Pages
             _gameResults = gameResults;
             _gameChoice = gameChoice;
         }
-
         
         public async void OnPostRockAsync()
         {
