@@ -3,9 +3,12 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<div class="text-center">
+    <h1 class="display-4" style="color: #800080">Rock Papper Scissors</h1>
+<div style="text-align: center;"><p style="color: gray" >Rock Paper Scissors is a zero sum game that is usually played by two people using their hands and no tools. The idea is to make shapes with an outstretched hand where each shape will have a certain degree of power and will lead to an outcome.</p></div>
 
 <form method="post">
-    <h2>Rock Paper ao Scissors?</h2>
+    <h2>Rock Paper or Scissors?</h2>
     <input type="submit" value="Rock" asp-page-handler="Rock"  />    <br />
     <input type="submit" value="Paper" asp-page-handler="Paper"  />    <br />
     <input type="submit" value="Scissors" asp-page-handler="Scissors"/>
