@@ -7,7 +7,6 @@ namespace RockPaperScissors_SimpleV.Pages
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<GameChoiceModel> UserChoice { get; set; }
         IConfiguration _configuration;
         IGameResults _gameResults;
         IGameChoice _gameChoice;
@@ -26,7 +25,7 @@ namespace RockPaperScissors_SimpleV.Pages
             var botChoice = await _gameChoice.GameIsChoosing(_configuration);
             var message = _gameResults.ShowGameResult("rock", botChoice);
 
-            Message = $"{ message}";
+            Message = $"{ message} ";
         }
 
         public async void OnPostPaperAsync()

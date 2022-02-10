@@ -33,7 +33,6 @@ namespace RockPaperScissors_SimpleV.Services
                 return gameResult.WhosWinner + "won with" + gameResult.GameChoice + ". Player lost with " + gameResult.PlayerChoice + ".";
             }
         }
-
         private string WinnerDefinitan(string playerChoice, string gameChoice, string whosChoice)
         {
             if (playerChoice == "rock" && gameChoice == "scissors")
