@@ -26,11 +26,11 @@ namespace RockPaperScissors_SimpleV.Services
             }
             else if (gameResult.WhosWinner == "Player")
             {
-                return gameResult.WhosWinner + " won with" + gameResult.PlayerChoice + ". " + gameResult.WhosChoice + " lost with " + gameResult.GameChoice + ".";
+                return gameResult.WhosWinner + " won with " + gameResult.PlayerChoice + ". " + gameResult.WhosChoice + " lost with " + gameResult.GameChoice + ".";
             }
             else
             {
-                return gameResult.WhosWinner + " won with" + gameResult.GameChoice + ". Player lost with " + gameResult.PlayerChoice + ".";
+                return gameResult.WhosWinner + " won with " + gameResult.GameChoice + ". Player lost with " + gameResult.PlayerChoice + ".";
             }
         }
 
