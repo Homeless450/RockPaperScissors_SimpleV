@@ -22,7 +22,6 @@ namespace RockPaperScissors_SimpleV.Pages
         public async Task OnPostRockAsync()
         {
             var botChoice = await _gameChoice.GameIsChoosing(_configuration);
-            //var botChoice = new GameChoiceModel() { Body = "rock", StatusCode=200, WhosChoice="curb"};
             var message = _gameResults.ShowGameResult("rock", botChoice);
 
             Message = $"{ message} ";
