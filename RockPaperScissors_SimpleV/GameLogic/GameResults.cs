@@ -12,13 +12,13 @@ namespace RockPaperScissors_SimpleV.Services
             gameResult.GameChoice = gameChoice.Body;
             gameResult.PlayerChoice = playerChoice;
             gameResult.WhosChoice = gameChoice.WhosChoice;
-            gameResult.WhosWinner = WinnerDefinitan(playerChoice, gameChoice.Body, gameResult.WhosChoice);
+            gameResult.WhosWinner = DetermineTheWinner(playerChoice, gameChoice.Body, gameResult.WhosChoice);
 
-            var message = EndGameMessageBuider(gameResult);
+            var message = BuideEndGameMessage(gameResult);
             return message;
         }
 
-        private string EndGameMessageBuider(GameResultModel gameResult)
+        private string BuideEndGameMessage(GameResultModel gameResult)
         {
             if (gameResult.WhosWinner == "Draw")
             {
@@ -34,7 +34,7 @@ namespace RockPaperScissors_SimpleV.Services
             }
         }
 
-        private string WinnerDefinitan(string playerChoice, string gameChoice, string whosChoice)
+        private string DetermineTheWinner(string playerChoice, string gameChoice, string whosChoice)
         {
             if (playerChoice == "rock" && gameChoice == "scissors")
             {
