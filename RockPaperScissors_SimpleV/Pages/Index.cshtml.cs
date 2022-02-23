@@ -9,7 +9,7 @@ namespace RockPaperScissors_SimpleV.Pages
         IConfiguration _configuration;
         IGameResults _gameResults;
         IGameChoice _gameChoice;
-        public string Message { get; set; } = "1";
+        public string Message { get; set; }
 
         public IndexModel(IConfiguration configuration, IGameResults gameResults, IGameChoice gameChoice)
         {
