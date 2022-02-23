@@ -1,9 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using RockPaperScissors_SimpleV.CurbServices;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 

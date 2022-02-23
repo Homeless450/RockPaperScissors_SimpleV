@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using RockPaperScissors_SimpleV.Services;
 using RockPaperScissors_SimpleV.CurbServices;
-using RockPaperScissors_SimpleV.Models;
 
 namespace RockPaperScissors_SimpleV.Pages
 {
