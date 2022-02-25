@@ -1,5 +1,6 @@
 using RockPaperScissors_SimpleV.CurbServices;
 using RockPaperScissors_SimpleV.Services;
+using Shared.ExceptionHandling;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseGlobalExceptionMiddleware();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
