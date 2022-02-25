@@ -9,13 +9,9 @@ namespace UnitTests.GameLogicTests
 
     public class GameChoiceTests
     {
-
-
         [Fact]
         public async Task GameIsChoosing_RequestToAPI_GetSomeResponse()
         {
-            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .Build();
@@ -29,6 +25,5 @@ namespace UnitTests.GameLogicTests
             //assert
             Assert.NotNull(output);
         }
-
     }
 }
