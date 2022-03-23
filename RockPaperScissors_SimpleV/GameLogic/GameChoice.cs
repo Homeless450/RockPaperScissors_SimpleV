@@ -17,7 +17,7 @@ namespace RockPaperScissors_SimpleV.CurbServices
             
             if (gameChoice.StatusCode == 200)
             {
-                gameChoice.WhosChoice = "curb";
+                gameChoice.WhosChoice = "Curb";
                 return gameChoice;
             }
             else
@@ -32,8 +32,8 @@ namespace RockPaperScissors_SimpleV.CurbServices
         {
             Random rnd = new Random();
 
-            string[] myArr = new string[3] { "rock", "paper", "scissors" }; 
-            var randomChoice = myArr[rnd.Next(0, myArr.Length)];
+            string[] LocalChoice = new string[3] { "rock", "paper", "scissors" }; 
+            var randomChoice = LocalChoice[rnd.Next(0, LocalChoice.Length)];
             return randomChoice;
         }
     }

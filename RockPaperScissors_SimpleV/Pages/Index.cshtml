@@ -3,16 +3,16 @@
 @{
     ViewData["Title"] = "Home page";
 }
+
 <div class="text-center">
     <h1 class="display-4" style="color: #800080">Rock Papper Scissors</h1>
 <div style="text-align: center;"><p style="color: gray" >Rock Paper Scissors is a zero sum game that is usually played by two people using their hands and no tools. The idea is to make shapes with an outstretched hand where each shape will have a certain degree of power and will lead to an outcome.</p></div>
 
 <form method="post">
     <h2>Rock Paper or Scissors?</h2>
-    <input type="submit" value="Rock" asp-page-handler="Rock"  />    <br />
-    <input type="submit" value="Paper" asp-page-handler="Paper"  />    <br />
-    <input type="submit" value="Scissors" asp-page-handler="Scissors"/>
+    <a href="#main"><input type="image" src="~/Paper.png" alt="Paper" width="63" height="139" value="Paper" asp-page-handler="Paper"  /></a>  
+    <a href="#main"><input type="image" src="~/Rock.png" alt="Rock" width="63" height="139" value="Rock" asp-page-handler="Rock"  /></a>    
+    <a href="#main"><input type="image" src="~/Scissors.png" alt="Scissors" width="63" height="139" value="Scissors" asp-page-handler="Scissors"/></a>
 </form>
 
 <h3>@Model.Message</h3>
-
